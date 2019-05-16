@@ -2,9 +2,8 @@ const chalk = require("chalk");
 
 const getNotes = require('./notes.js');
 
-const msg = getNotes();
+const command = process.argv[2];
 
-
-const;
+console.log(process.arv);
 
 
