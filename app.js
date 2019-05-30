@@ -10,7 +10,12 @@ yargs.version('1.1.0');
 yargs.command({
   command: 'add',
   describe: 'Add a new note',
-  handler: function () {
+  builder: {
+    title: {
+      describe:'Note title'
+    }
+  },
+  handler: function (argv) {
     console.log('Adding a new note!');
   }
 })
@@ -22,6 +27,22 @@ yargs.command({
     console.log('Removing the note!');
   }
 })
+
+yargs.command({
+  command: 'list',
+  describe: 'List all the notes',
+  handler: function () {
+    console.log('Listing a notes')
+  }
+})
+
+yargs.command({
+  command: "read",
+  describe: "read all the notes",
+  handler: function() {
+    console.log("Reading notes! ");
+  }
+});
 
 
 console.log(yargs.argv);
