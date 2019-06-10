@@ -16,4 +16,15 @@ const fs = require('fs');
 // const dataJSON = dataBuffer.toString();
 // const data = JSON.parse(dataJSON);
 // console.log(data.title);
+const personDataBuffer =fs.readFileSync('1-json.json');
+
+const personData = personDataBuffer.toString();
+
+const personDataJSON = JSON.parse(personData);
+
+console.log(personDataJSON.name,personDataJSON.planet,personDataJSON.age);
+// console.log(personDataJSON.planet);
+// console.log(personDataJSON.age);
+
+
 
