@@ -1,3 +1,4 @@
+const fs = require('fs');
 /***
  * Learning about Jason Objects
  */
@@ -9,9 +10,5 @@ const book = {
 
 const bookJSON = JSON.stringify(book);
 
-console.log(bookJSON);
-
-const parsedData = JSON.parse(bookJSON);
-
-console.log(parsedData.author);
-console.log(parsedData.title);
+// To create JSON file
+fs.writeFileSync('1-json.json',bookJSON);
