@@ -17,13 +17,18 @@ const fs = require('fs');
 // const data = JSON.parse(dataJSON);
 // console.log(data.title);
 const personDataBuffer =fs.readFileSync('1-json.json');
-
 const personData = personDataBuffer.toString();
-
 const personDataJSON = JSON.parse(personData);
 
-console.log('His name is ' + personDataJSON.name + '.' + ' He lives in planet: ' + 
-personDataJSON.planet + '.' + ' His age is: ' + personDataJSON.age + ' Years old. ' );
+personData.name= 'Jose';
+personData.age = 54;
+
+const userJASON = JSON.stringify(personDataJSON);
+fs.writeFileSync('1-json.json', userJASON);
+
+
+// console.log('His name is ' + personDataJSON.name + '.' + ' He lives in planet: ' + 
+// personDataJSON.planet + '.' + ' His age is: ' + personDataJSON.age + ' Years old. ' );
 
 
 
