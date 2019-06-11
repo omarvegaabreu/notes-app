@@ -18,11 +18,12 @@ const fs = require('fs');
 // console.log(data.title);
 const personDataBuffer =fs.readFileSync('1-json.json');
 const personData = personDataBuffer.toString();
-
-personData.name= 'Jose';
-personData.age = 54;
-
 const personDataJSON = JSON.parse(personData);
+
+personDataJSON.name= 'Jose';
+personDataJSON.age = 54;
+
+
 
 const userJASON = JSON.stringify(personDataJSON);
 fs.writeFileSync('1-json.json', userJASON);
