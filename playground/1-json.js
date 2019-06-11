@@ -24,8 +24,7 @@ const personDataJSON = JSON.parse(personData);
 
 console.log('His name is ' + personDataJSON.name + '.' + ' He lives in planet: ' + 
 personDataJSON.planet + '.' + ' His age is: ' + personDataJSON.age + ' Years old. ' );
-// console.log(personDataJSON.planet);
-// console.log(personDataJSON.age);
+
 
 
 
