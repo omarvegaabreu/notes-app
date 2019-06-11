@@ -4,13 +4,22 @@ const getNotes = function () {
   return 'Your notes... '
 }
 
-const addNote = function (title, body) {
+const addNote = function(title, body) {
   const notes = loadNotes();
-  notes.push({
-    title: title,
-    body: body
+  const duplicaNotes = notes.filter(function(note) {
+    return note.title === title;
   });
-  saveNotes(notes);
+
+  if (duplicaNotes.length === 0) {
+    notes.push({
+      title: title,
+      body: body
+    });
+    saveNotes(notes);
+    console.log('New note added! ');
+  } else {
+    console.log('Note title taken! ');
+  }
 };
 
 const saveNotes = function (notes) {
