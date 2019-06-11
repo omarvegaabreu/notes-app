@@ -6,11 +6,11 @@ const getNotes = function () {
 
 const addNote = function(title, body) {
   const notes = loadNotes();
-  const duplicaNotes = notes.filter(function(note) {
+  const duplicateNotes = notes.filter(function(note) {
     return note.title === title;
   });
 
-  if (duplicaNotes.length === 0) {
+  if (duplicateNotes.length === 0) {
     notes.push({
       title: title,
       body: body
@@ -41,9 +41,17 @@ const loadNotes = function () {
   
 }
 
+const removeNotes = function(title) {
+  // const notes = loadNotes();
+  // const duplicateNotes = notes.filter(function(note) {
+  //   return note.title === title;
+  console.log(title);
+  };
+
 
 module.exports = {
   getNotes: getNotes,
-  addNote: addNote
+  addNote: addNote,
+  removeNotes:removeNotes
 };
 
