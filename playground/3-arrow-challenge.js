@@ -5,18 +5,6 @@
 // 2. Use filter to to return just the incompleted tasks (arrow function)
 // 3. Test your work by running the script
 
-// const event = {
-//   name: " Birthday Party",
-//   guestList: ["Andrew ", "Jen ", "Mike "],
-//   printGuestList() {
-//     console.log("Guest list for " + this.name);
-//     this.guestList.forEach(guest => {
-//       console.log(guest + "is attending" + this.name);
-//     });
-//   }
-// };
-// event.printGuestList();
-
 const tasks = {
   tasks: [
     {
