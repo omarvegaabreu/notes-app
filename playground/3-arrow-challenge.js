@@ -33,10 +33,7 @@ const tasks = {
     }
   ],
   getTasksToDo() {
-    console.log("Guest list for " + this.tasks);
-    this.tasks.forEach(task => {
-      console.log(task + "is attending" + this.tasks);
-    });
+    const tasksTodo = this.tasks.filter(tasks => tasks.completed === false);
   }
 };
 
