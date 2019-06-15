@@ -9,4 +9,4 @@
 //   return x * x;
 // };
 // console.log(x)
-function name(params) {}
+// function name(params) {}
