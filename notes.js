@@ -48,8 +48,28 @@ const loadNotes = () => {
   }
 };
 
+const listNotes = () => {
+  const notes = loadNotes();
+  console.log(chalk.inverse("Your notes!!"));
+
+  notes.forEach(note => {
+    console.log(note.title);
+  });
+};
+
+/**
+ * Wire up lists command
+ *
+ * 1. create and export list notes from notes.js
+ * -"your notes" using chalk
+ * -print note title for each note (use for each loop)
+ * 2. call list notes from the command handler
+ * 3.test your work.
+ */
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
-  removeNotes: removeNotes
+  removeNotes: removeNotes,
+  listNotes: listNotes
 };
