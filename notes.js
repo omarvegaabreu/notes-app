@@ -4,6 +4,7 @@ const chalk = require("chalk");
 const getNotes = () => "Welcome to the notes app :) ";
 console.log(chalk.green.inverse(getNotes()));
 
+// Will add note, arguments needed are title and body
 const addNote = (title, body) => {
   const notes = loadNotes();
   const duplicateNotes = notes.filter(note => note.title === title);
