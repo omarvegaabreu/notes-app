@@ -60,9 +60,34 @@ const listNotes = () => {
   });
 };
 
+//function to read notes from json file
+// const readNote = title => {
+//   const notes = loadNotes();
+//   const note = notes.find(note => note.title === title);
+//   if (note) {
+//     console.log(chalk.inverse(note.title));
+//     console.log(note.body);
+//   } else {
+//     console.log(chalk.red.inverse("Note note found!"));
+//   }
+// };
+
+const readNote = title => {
+  const notes = loadNotes();
+  const note = notes.find(note => note.title === title);
+
+  if (note) {
+    console.log(chalk.inverse(note.title));
+    console.log(note.body);
+  } else {
+    console.log(chalk.red.inverse("Note not found!"));
+  }
+};
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
   removeNotes: removeNotes,
-  listNotes: listNotes
+  listNotes: listNotes,
+  readNote: readNote
 };
