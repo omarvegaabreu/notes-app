@@ -22,6 +22,7 @@ const addNote = (title, body) => {
   }
 };
 
+//will remove notes
 const removeNotes = title => {
   const notes = loadNotes();
   const notesToKeep = notes.filter(note => note.title !== title);
@@ -34,11 +35,12 @@ const removeNotes = title => {
   }
 };
 
+//fill save notes to notes.json file
 const saveNotes = notes => {
   const dataJSON = JSON.stringify(notes);
   fs.writeFileSync("notes.json", dataJSON);
 };
-
+//function load notes from notes.json file
 const loadNotes = () => {
   try {
     const dataBuffer = fs.readFileSync("notes.json");
@@ -48,7 +50,7 @@ const loadNotes = () => {
     return [];
   }
 };
-
+//List note command: Will list the titles for each note
 const listNotes = () => {
   const notes = loadNotes();
   console.log(chalk.inverse("Your notes!!"));
@@ -57,16 +59,6 @@ const listNotes = () => {
     console.log(note.title);
   });
 };
-
-/**
- * Wire up lists command
- *
- * 1. create and export list notes from notes.js
- * -"your notes" using chalk
- * -print note title for each note (use for each loop)
- * 2. call list notes from the command handler
- * 3.test your work.
- */
 
 module.exports = {
   getNotes: getNotes,
